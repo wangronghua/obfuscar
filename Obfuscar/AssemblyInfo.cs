@@ -427,6 +427,11 @@ namespace Obfuscar
                 {
                     var node = new Node<TypeDefinition> {Item = item};
                     Root.Add(node);
+                    if (_map.ContainsKey(item.FullName))
+                    {
+                        throw new ObfuscarException($"¼üÖØ¸´{item.FullName}");
+                    }
+
                     _map.Add(item.FullName, node);
                 }
 
@@ -548,6 +553,7 @@ namespace Obfuscar
             try
             {
                 var result = definition.MainModule.GetAllTypes();
+                //var result = definition.MainModule.GetAllTypes().Where(x=>x.FullName!= "<Module>"&& x.FullName != "<>f__AnonymousType0`2" && x.FullName != "<PrivateImplementationDetails>");
                 var graph = new Graph(result);
                 return _cached = graph.GetOrderedList();
             }

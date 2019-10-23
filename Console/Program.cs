@@ -66,8 +66,9 @@ namespace Obfuscar
 
             if (args.Length == 0)
             {
-                ShowHelp(p);
-                return 0;
+                args = new string[]{ "Obfuscar.xml"};
+                //ShowHelp(p);
+                //return 0;
             }
 
             List<string> extra;

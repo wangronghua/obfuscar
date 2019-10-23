@@ -1,0 +1,33 @@
+﻿<?xml version='1.0'?>
+<Obfuscator>
+  <!--<Var name="InPath" value="D:\publish\temp\debug\api" />-->
+  <Var name="InPath" value="D:\project\csharp\1_三层\1_temp_猫鼬\trunk\SP.Api\bin\Release\netcoreapp2.2" />
+  <Var name="OutPath" value="D:\publish\temp\debug\api_Obfuscar" />
+  <Var name="KeepPublicApi" value="true" />
+  <Var name="HidePrivateApi" value="false" />
+  <Var name="HideStrings" value="true" />
+
+  <AssemblySearchPath path="D:\project\csharp\1_三层\1_temp_猫鼬\trunk\SP.Api\bin\Release\netcoreapp2.2" />
+  <Module file="$(InPath)\Ben.Common.dll">
+    <!--<SkipNamespace rx="StructureMap.*" />
+    <SkipType rx="StructuremapMvcIn.*" />-->
+  </Module>
+
+
+  <!--<Module file="$(InPath)\SP.Api.dll">
+  </Module>-->
+
+
+  <!--<SkipField type="Ben.Common.LDictionary`2.TypeName" attrib="public" rx="Pub.*" />-->
+
+
+  <!--<SkipNamespace name="Company.PublicBits" />
+  <SkipField type="Full.Namespace.And.TypeName" attrib="public" rx="Pub.*" />-->
+
+  <!--<Module file="$(InPath)\ZhumengInfo.BIM.Core.dll">
+    <SkipNamespace name="Autodesk*"/>
+  </Module>-->
+
+
+</Obfuscator>
+

@@ -115,7 +115,7 @@ namespace Obfuscar
                 {
                     result = base.Resolve(name, parameters);
                 }
-                catch (AssemblyResolutionException)
+                catch (AssemblyResolutionException e)
                 {
                     throw new ObfuscarException("Unable to resolve dependency:  " + name.Name);
                 }
